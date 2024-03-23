@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Name</title>
+    <!-- Include any CSS files or styles here -->
+</head>
+
+<body>
+    <!-- Navigation buttons for previous and next images -->
+    <button id="prevButton">Previous</button>
+    <button id="nextButton">Next</button>
+
+    <!-- Image container -->
+    <div id="imageContainer">
+        <!-- Initial image -->
+        <img id="currentImage" src="" alt="Image">
+        <!-- Image name -->
+        <p id="imageName"></p>
+        <!-- Text-to-speech button -->
+        <button id="ttsButton">Text to Speech</button>
+    </div>
+    <script>
+        const imageNames = ["Good Bye.jpg", "Hello.jpg", "iHelp.jpg"]; // List of image filenames
+        let currentIndex = 0; // Initialize index for current image
+
+        // Function to update image and name
+        function updateImage() {
+            const imageName = imageNames[currentIndex];
+            document.getElementById("currentImage").src = `pics_for_learning_path/Basics${Hello}`; // Update image source
+            document.getElementById("imageName").textContent = imageName; // Update image name
+        }
+
+        // Function to handle click on next button
+        document.getElementById("nextButton").addEventListener("click", function () {
+            currentIndex = (currentIndex + 1) % imageNames.length; // Move to next image
+            updateImage(); // Update displayed image and name
+        });
+
+        // Function to handle click on previous button
+        document.getElementById("prevButton").addEventListener("click", function () {
+            currentIndex = (currentIndex - 1 + imageNames.length) % imageNames.length; // Move to previous image
+            updateImage(); // Update displayed image and name
+        });
+
+        // Function to handle text-to-speech
+        document.getElementById("ttsButton").addEventListener("click",
+            function speakText() {
+                // Get text to speak from textarea
+                var text = document.getElementById('textToSpeak').value;
+        });
+
+        // Load initial image
+        updateImage();
+    </script>
+    <!-- Include any JavaScript files or scripts here -->
+</body>
+
+</html>

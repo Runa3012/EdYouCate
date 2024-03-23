@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Authentication</title>
+   <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+   <div class="Form-box">
+      <form class="Login-form" id="loginForm">
+         <h1>Login</h1>
+         <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+            <ion-icon name="mail-outline"></ion-icon>
+         </div>
+         <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+         </div>
+         <div class="checkbox">
+            <span>
+               <input type="checkbox" id="login-checkbox">
+               <label for="login-checkbox">Remember Me</label>
+            </span>
+            <a href="#">Forget password ?</a> <!-- Change h5 to anchor tag for the forgot password link -->
+         </div>
+         <button type="submit" class="submit-btn">Submit</button>
+         <h5 class="Register-btn">Don't have an account? Register</h5>
+      </form>
+      <form class="Register-form" id="registerForm">
+         <h1>Register</h1>
+         <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+            <ion-icon name="mail-outline"></ion-icon>
+         </div>
+         <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="register-checkbox">
+            <label for="register-checkbox">I agree to the terms & conditions</label>
+         </div>
+         <button type="submit" class="submit-btn">Submit</button>
+         <h5 class="Login-btn">Already registered? Login</h5>
+      </form>
+   </div>
+
+   <!-- Firebase Namespaced SDK -->
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js" defer></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js" defer></script>
+
+
+   <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+         apiKey: "AIzaSyBwVP7RBTfZAPKQYnv-RXdZH8av-8rhk5s",
+         authDomain: "edyoucate-bbbd0.firebaseapp.com",
+         projectId: "edyoucate-bbbd0",
+         storageBucket: "edyoucate-bbbd0.appspot.com",
+         messagingSenderId: "140562576715",
+         appId: "1:140562576715:web:f106bc9a271e6c55c864ce",
+         measurementId: "G-G16R0HHQ3Y"
+       };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      console.log("Firebase initialized:", app);
+
+      // Login form submission
+      document.getElementById('loginForm').addEventListener('submit', function (event) {
+         event.preventDefault();
+         const email = this.querySelector('input[type="email"]').value;
+         const password = this.querySelector('input[type="password"]').value;
+
+         auth.signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+               // Redirect to index.html upon successful login
+               console.log("User logged in:", userCredential.user);
+               window.location.href = "index.html";
+            })
+            .catch((error) => {
+               console.error('Login error:', error.message);
+            });
+      });
+
+      // Registration form submission
+      document.getElementById('registerForm').addEventListener('submit', function (event) {
+         event.preventDefault();
+         const email = this.querySelector('input[type="email"]').value;
+         const password = this.querySelector('input[type="password"]').value;
+
+         auth.createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+               // Redirect to index.html upon successful registration
+               console.log("User registered:", userCredential.user);
+               window.location.href = "index.html";
+            })
+            .catch((error) => {
+               console.error('Registration error:', error.message);
+            });
+      });
+   </script>
+
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+   <script src="signup.js" defer></script>
+</body>
+
+</html>

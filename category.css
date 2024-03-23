@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .image-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .details {
+    margin-bottom: 20px;
+  }
+  
+  .navigation {
+    margin-top: 20px; /* Assuming this class doesn't exist, commented out */
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 22px;
+  }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Authentication Page</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="transparent-box">
+                <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <!-- Centering the login form -->
+                            <div class="form-group">
+                                <h1>Login</h1>
+                                <label for="login_email"><p>Email</p></label>
+                                <input type="text" name="login_email" id="login_email" class="form-control"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login_password"><p>Password</p></label>
+                                <input type="password" name="login_password" id="login_password" class="form-control"
+                                    placeholder="Enter your password">
+                            </div>
+                            <button type="button" id="login" name="login" class="btn btn-success btn-block">Login</button>
+                            <div class="create-account text-center">
+                                <p>Create A New Account? <a href="#" id="show_register">Sign Up</a></p>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-sm-4 col-sm-offset-4" style="display:none;" id="register_form">
+                            <!-- Hidden Register Form -->
+                            <h2>Sign Up</h2>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" class="form-control"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    placeholder="Enter your password">
+                            </div>
+                            <button type="button" id="register" name="register" class="btn btn-success btn-block">Sign In</button>
+                            <div class="create-account text-center">
+                                <p>Already Have An Account? <a href="#" id="show_login">Sign In</a></p>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBwVP7RBTfZAPKQYnv-RXdZH8av-8rhk5s",
+        authDomain: "edyoucate-bbbd0.firebaseapp.com",
+        projectId: "edyoucate-bbbd0",
+        storageBucket: "edyoucate-bbbd0.appspot.com",
+        messagingSenderId: "140562576715",
+        appId: "1:140562576715:web:f106bc9a271e6c55c864ce",
+        measurementId: "G-G16R0HHQ3Y"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    console.log(app);
+
+    //----- New Registration code start	  
+    document.getElementById("show_login").addEventListener("click", function () {
+        document.getElementById("register_form").style.display = 'none';
+        document.getElementById("login_form").style.display = 'block';
+    });
+
+    //----- New Registration code start	  
+    document.getElementById("register").addEventListener("click", function () {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        //For new registration
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user);
+                alert("Registration successfully!!");
+                window.location.href = "index.html";
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorMessage);
+                alert(error);
+            });
+    });
+    //----- End
+
+    //----- Login code start	  
+    document.getElementById("login").addEventListener("click", function () {
+        var email = document.getElementById("login_email").value;
+        var password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user);
+                alert(user.email + " Login successfully!!!");
+                window.location.href = "index.html";
+                document.getElementById('logout').style.display = 'block';
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage);
+                alert(errorMessage);
+            });
+    });
+</script>
+
+<script src="login.js"></script>
+
+</html>

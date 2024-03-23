@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quiz</h1>
+        <div class="category-selection" id="category-selection">
+            <label for="category">Select Category:</label>
+            <select id="category">
+                <option value="Random">Random</option>
+                <option value="Basic">Basic</option>
+                <option value="Greetings">Greetings</option>
+                <option value="Phrases">Phrases</option>
+                <option value="Colors">Colors</option>
+                <option value="Animals">Animals</option>
+                <option value="Objects">Objects</option>
+                <option value="Time">Time</option>
+                <option value="Daily Routine">Daily Routine</option>
+                <option value="Calendar">Calendar</option>
+                <option value="Climate">Climate</option>
+                <option value="Money & Finance">Money & Finance</option>
+                <option value="Instructions">Instructions</option>
+                <option value="Food & Drinks">Food & Drinks</option>
+                <option value="Technology">Technology</option>
+                <option value="Subjects">Subjects</option>
+                <option value="Occupations">Occupations</option>
+                <option value="Countries">Countries</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <button id="start-button">Start Quiz</button>
+        </div>
+        <div class="quiz" id="quiz" style="display: none;">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="button-container">
+                <button class="button" id="prev-button">Previous</button>
+                <button class="button" id="next-button">Next</button>
+            </div>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

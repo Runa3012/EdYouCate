@@ -1,0 +1,41 @@
+{
+    "questions": [
+      {
+        "question": "What is this?",
+        "image": "path/to/word/image1.png",
+        "options": ["Option 1", "Option 2", "Option 3"],
+        "answer": "Option 1"
+      },
+      {
+        "question": "What is that?",
+        "image": "path/to/word/image2.png",
+        "options": ["Option A", "Option B", "Option C"],
+        "answer": "Option B"
+      },
+      {
+        "question": "Identify this word:",
+        "image": "path/to/word/image3.png",
+        "options": ["Option X", "Option Y", "Option Z"],
+        "answer": "Option Z"
+      },
+      {
+        "question": "What word is shown in the image?",
+        "image": "path/to/word/image4.png",
+        "options": ["Option P", "Option Q", "Option R"],
+        "answer": "Option Q"
+      },
+      {
+        "question": "What is depicted in this picture?",
+        "image": "path/to/word/image5.png",
+        "options": ["Option M", "Option N", "Option O"],
+        "answer": "Option O"
+      },
+      {
+        "question": "Identify the object in the image:",
+        "image": "path/to/word/image6.png",
+        "options": ["Option G", "Option H", "Option I"],
+        "answer": "Option I"
+      }
+    ]
+  }
+  

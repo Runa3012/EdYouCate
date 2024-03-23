@@ -1,0 +1,364 @@
+{
+  "categories": [
+    {
+      "name": "Basic",
+      "image": "basic.png",
+      "words": [
+        "hello",
+        "goodbye",
+        "yes",
+        "no",
+        "please",
+        "thank you",
+        "sorry",
+        "excuse me",
+        "help",
+        "hungry"
+      ]
+    },
+    {
+      "name": "Greetings",
+      "image": "greetings.png",
+      "subcategories": [
+        {
+          "name": "easy",
+          "words": [
+            "Hi!",
+            "Hello!",
+            "Hey!",
+            "Good morning!",
+            "Good afternoon!",
+            "Good evening!"
+          ]
+        },
+        {
+          "name": "moderate",
+          "words": [
+            "How are you?",
+            "What's up?",
+            "How's it going?",
+            "Nice to see you!",
+            "How have you been?",
+            "Long time no see!"
+          ]
+        },
+        {
+          "name": "casual",
+          "words": [
+            "Hey there!",
+            "What's happening?",
+            "Yo!",
+            "Sup?",
+            "Howdy!",
+            "Hey, how's life?"
+          ]
+        },
+        {
+          "name": "formal",
+          "words": [
+            "Good day!",
+            "Greetings!",
+            "Pleased to meet you.",
+            "How do you do?",
+            "Good to see you.",
+            "I hope you're doing well."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Phrases",
+      "image": "phrases.png",
+      "words": [
+        "thank you",
+        "you're welcome",
+        "excuse me",
+        "I'm sorry",
+        "How are you?",
+        "What's up?",
+        "I don't know",
+        "What's your name?",
+        "Where are you from?",
+        "Nice to meet you",
+        "How's the weather?",
+        "Can you help me?",
+        "What time is it?",
+        "I'm hungry",
+        "I'm thirsty",
+        "How's your day?",
+        "Have a nice day"
+      ]
+    },
+    {
+      "name": "Colors",
+      "image": "colors.png",
+      "words": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "orange",
+        "purple",
+        "pink",
+        "brown",
+        "gray"
+      ]
+    },
+    {
+      "name": "Animals",
+      "image": "animals.png",
+      "categories": [
+        {
+          "name": "Domestic",
+          "words": [
+            "dog",
+            "cat",
+            "bird",
+            "duck",
+            "horse",
+            "cow",
+            "pig",
+            "sheep",
+            "goat",
+            "rabbit"
+          ]
+        },
+        {
+          "name": "Wild",
+          "words": [
+            "lion",
+            "tiger",
+            "bear",
+            "wolf",
+            "giraffe",
+            "zebra",
+            "monkey",
+            "kangaroo",
+            "panda",
+            "fox"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Objects",
+      "image": "objects.png",
+      "words": [
+        "chair",
+        "table",
+        "book",
+        "pen",
+        "lamp",
+        "sofa",
+        "computer",
+        "phone",
+        "television",
+        "clock",
+        "knife",
+        "fork",
+        "spoon",
+        "plate",
+        "cup",
+        "glass",
+        "mug",
+        "bowl",
+        "picture frame",
+        "vase",
+        "carpet",
+        "mirror",
+        "desk",
+        "bed"
+      ]
+    },
+    {
+      "name": "Calendar",
+      "image": "calendar.png",
+      "categories": [
+        {
+          "name": "Months",
+          "words": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ]
+        },
+        {
+          "name": "Days of the Week",
+          "words": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Climate",
+      "image": "climate.png",
+      "words": [
+        "sunny",
+        "rainy",
+        "cloudy",
+        "windy"
+      ]
+    },
+    {
+      "name": "Money & Finance",
+      "image": "money.png",
+      "words": [
+        "rupee",
+        "paisa",
+        "bank",
+        "credit card",
+        "debit card",
+        "investment",
+        "Reserve Bank of India",
+        "State Bank of India",
+        "HDFC Bank",
+        "ICICI Bank",
+        "Mutual funds"
+      ]
+    },
+    {
+      "name": "Instructions",
+      "image": "instructions.png",
+      "words": [
+        "open",
+        "close",
+        "start",
+        "stop",
+        "go",
+        "come",
+        "enter",
+        "exit",
+        "continue",
+        "pause",
+        "resume",
+        "proceed",
+        "follow",
+        "wait"
+      ]
+    },
+    {
+      "name": "Countries",
+      "image": "countries.png",
+      "words": [
+        "USA",
+        "China",
+        "India",
+        "Brazil",
+        "Russia",
+        "Germany",
+        "United Kingdom",
+        "France",
+        "Canada",
+        "Australia",
+        "Japan",
+        "South Korea",
+        "Mexico",
+        "South Africa"
+      ]
+    },
+    {
+      "name": "Food & Drinks",
+      "image": "food.png",
+      "words": [
+        "apple",
+        "banana",
+        "coffee",
+        "pizza",
+        "orange",
+        "bread",
+        "milk",
+        "tea",
+        "water",
+        "juice",
+        "rice",
+        "chicken",
+        "salad",
+        "sandwich"
+      ]
+    },
+    {
+      "name": "Technology",
+      "image": "technology.png",
+      "words": [
+        "computer",
+        "smartphone",
+        "internet",
+        "software",
+        "tablet",
+        "laptop",
+        "Wi-Fi",
+        "Bluetooth",
+        "hardware",
+        "operating system",
+        "app",
+        "website",
+        "network",
+        "digital"
+      ]
+    },
+    {
+      "name": "Subjects",
+      "image": "subjects.png",
+      "words": [
+        "mathematics",
+        "science",
+        "history",
+        "geography",
+        "literature",
+        "art",
+        "music",
+        "physical education",
+        "computer science",
+        "economics",
+        "sociology",
+        "psychology",
+        "philosophy",
+        "languages"
+      ]
+    },
+    {
+      "name": "Occupations",
+      "image": "occupations.png",
+      "words": [
+        "doctor",
+        "teacher",
+        "engineer",
+        "nurse",
+        "lawyer",
+        "accountant",
+        "programmer",
+        "chef",
+        "artist",
+        "police officer",
+        "firefighter",
+        "architect",
+        "dentist",
+        "farmer",
+        "pilot",
+        "actor/actress",
+        "scientist",
+        "electrician",
+        "plumber",
+        "carpenter"
+      ]
+    }    
+  ]
+}
